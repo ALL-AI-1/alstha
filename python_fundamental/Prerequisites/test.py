@@ -74,6 +74,20 @@ C = list(zip(a, b))
 print(C)
 
 a=[(1,5),(2,3),(3,4),(4,2)]
-# The 'key' argument in sorted() specifies a function of one argument that is used to extract a comparison key from each list element.
-# In this example, key=lambda x: x just returns the element itself, so sorting is done by the values directly.
+# The 'key' argument in sorted() specifies a function that determines how the elements are compared for sorting.
+# Here, key=lambda x: x[1] means sorting the list of tuples by the second element of each tuple.
 print(sorted(a, key=lambda x: x[1]))
+
+# .map() is a built-in Python function that applies a given function to each item in an iterable (like a list) and returns a map object (which can be converted to a list).
+# Example: Double each number in a list
+nums = [1, 2, 3, 4]
+doubled = list(map(lambda x: x * 2, nums))
+print("Doubled numbers using map():", doubled)  # Output: [2, 4, 6, 8]
+# Simple example of map: square each number in a list (no lambda)
+def square(x):
+    return x ** 2
+
+numbers = [1, 2, 3, 4, 5]
+squared = list(map(square, numbers))
+print("Squared numbers using map():", squared)  # Output: [1, 4, 9, 16, 25]
+
