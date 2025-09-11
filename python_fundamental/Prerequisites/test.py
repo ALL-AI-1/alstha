@@ -100,3 +100,19 @@
 #         print("File does not exist for pathlib demo.")
 # except Exception as e:
 #     print("Error in pathlib file handling:", e)
+
+# Find a duplicate in the list and print all indices of that duplicate
+numbers = [3, 6, 2, 4, 3, 6, 8, 9]
+duplicate = None
+
+for i in range(len(numbers)):
+    for j in range(i + 1, len(numbers)):
+        if numbers[i] == numbers[j]:
+            duplicate = numbers[i]
+            break
+    if duplicate is not None:
+        break
+
+for i in range(len(numbers)):
+    if numbers[i] == duplicate:
+        print(i)
