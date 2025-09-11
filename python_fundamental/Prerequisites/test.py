@@ -117,4 +117,5 @@
 #     if numbers[i] == duplicate:
 #         print(i)
 
-
+for i in 6:
+    print(ord(i))
