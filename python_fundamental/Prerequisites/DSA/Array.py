@@ -7,7 +7,7 @@ print(f"Expense in feb is {extra_in_feb}")
 """2."""
 total_in_quarter=0
 for i in range(3):
-    total_in_quarter=
+    total_in_quarter=expense[0]+expense[1]+expense[2]
 print(f"Total in quarter is {total_in_quarter}")
 
 """3."""
