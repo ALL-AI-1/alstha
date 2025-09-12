@@ -117,5 +117,20 @@
 #     if numbers[i] == duplicate:
 #         print(i)
 
-for i in 6:
-    print(ord(i))
+import heapq
+
+# Creating an initial heap
+h = [10, 20, 15, 30, 40]
+heapq.heapify(h)
+print(h)
+
+# Appending an element
+heapq.heappush(h, 5)
+
+# Heap before popping
+print(h)
+
+# Pop the smallest element from the heap
+min = heapq.heappop(h)
+print("Smallest:", min)
+print(h)
