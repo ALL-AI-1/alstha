@@ -258,7 +258,28 @@
 # # [('batman', 10), ('battery', 5)]
 
 
-arr=[1,2,3,4]
+# arr=[1,2,3,4]
 
-x=arr.append(7)
-print(arr)
+# x=arr.append(7)
+# print(arr)
+
+# import timeit
+
+# print(timeit.timeit("12*3", number=1))
+# print(timeit.timeit("1*1", number=999999999))
+
+import polars as pl
+
+# Example: Create a Polars DataFrame and perform a simple operation
+df = pl.DataFrame({
+    "a": [1, 2, 3, 4],
+    "b": [5, 6, 7, 8]
+})
+
+# Add a new column 'c' which is the sum of 'a' and 'b'
+df = df.with_columns(
+    (pl.col("a") + pl.col("b")).alias("c")
+)
+
+print(df)
+
